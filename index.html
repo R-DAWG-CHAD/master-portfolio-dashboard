@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OmniTools PRO — Master Network Dashboard</title>
+  <meta name="description" content="Central management dashboard for monitoring, launching, and managing the 11-tool web application network.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Top Header Navigation -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="brand">
+        <div class="brand-icon">🌐</div>
+        <div class="brand-title">OmniTools <span class="brand-badge">CONTROL CENTER</span></div>
+      </div>
+      <div class="nav-metrics">
+        <div class="mini-stat"><span class="stat-dot green"></span> <strong id="onlineCount">11/11</strong> Apps Online</div>
+        <div class="mini-stat">⚡ Network Total: <strong>11 Assets</strong></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Banners -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-card">
+        <div class="hero-text">
+          <span class="pill-tag">🚀 Web Utility Portfolio Management</span>
+          <h1>Master Network Control Dashboard</h1>
+          <p>Monitor status, launch live tools, inspect GitHub repos, copy sitemaps, and access Analytics & Search Console in 1 click.</p>
+        </div>
+        <div class="quick-actions">
+          <a href="https://search.google.com/search-console" target="_blank" class="btn-primary">🔍 Google Search Console ↗</a>
+          <a href="https://vercel.com/dashboard" target="_blank" class="btn-secondary">⚡ Vercel Analytics Dashboard ↗</a>
+          <a href="https://adsense.google.com" target="_blank" class="btn-secondary">💰 Google AdSense Portal ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Controls Bar -->
+  <section class="controls-section">
+    <div class="container">
+      <div class="controls-bar">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="toolSearch" placeholder="Search tool by name, keyword, or niche...">
+        </div>
+        <div class="filter-pills" id="filterContainer">
+          <button class="filter-btn active" data-filter="all">All (11)</button>
+          <button class="filter-btn" data-filter="finance">Finance (4)</button>
+          <button class="filter-btn" data-filter="dev">Developer (4)</button>
+          <button class="filter-btn" data-filter="design">Design & Marketing (3)</button>
+        </div>
+        <button id="btnPingAll" class="btn-ping">📡 Ping Network Status</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Master Tool Grid -->
+  <main class="dashboard-section">
+    <div class="container">
+      <div class="tools-grid" id="toolsGrid">
+        <!-- Javascript dynamically renders 11 tool cards -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <span>© 2026 OmniTools Control Network • All 11 digital assets operational.</span>
+        <div class="footer-links">
+          <a href="#privacy" onclick="openPrivacyModal(event)">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:99999;backdrop-filter:blur(10px);padding:2rem;overflow-y:auto;">
+    <div style="max-width:650px;margin:2rem auto;background:#1E293B;border:1px solid #334155;border-radius:12px;padding:2rem;color:#F8FAFC;position:relative;">
+      <button onclick="closePrivacyModal()" style="position:absolute;top:1rem;right:1rem;background:none;border:none;color:#94A3B8;font-size:1.5rem;cursor:pointer;">&times;</button>
+      <h2 style="margin-bottom:1rem;color:#10B981;font-family:sans-serif;">Privacy Policy</h2>
+      <p style="font-size:0.9rem;color:#94A3B8;line-height:1.6;margin-bottom:1rem;font-family:sans-serif;">This control dashboard monitors web tools without collecting personal data or user credentials.</p>
+      <button onclick="closePrivacyModal()" style="margin-top:1.5rem;background:#10B981;color:#000;padding:0.6rem 1.25rem;border:none;border-radius:6px;font-weight:700;cursor:pointer;">Close</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
